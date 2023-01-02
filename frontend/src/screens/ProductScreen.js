@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   Form,
@@ -19,6 +19,7 @@ const ProductScreen = () => {
   const [qty, setQty] = useState(0);
 
   const { id } = useParams();
+  const navigate = useNavigate();
   // const product = products.find((p) => p._id === id);
 
   const productDetails = useSelector((state) => state.productDetails);
@@ -29,6 +30,10 @@ const ProductScreen = () => {
   useEffect(() => {
     dispatch(listProductDetails(id));
   }, [id, dispatch]);
+
+  const addToCartHandler = () => {
+    navigate(`/cart/${id}?qty=${qty}`);
+  };
 
   return (
     <>
@@ -104,6 +109,7 @@ const ProductScreen = () => {
 
                 <ListGroup.Item>
                   <Button
+                    onClick={addToCartHandler}
                     className="btn-block"
                     type="button"
                     style={{ width: '100%' }}
