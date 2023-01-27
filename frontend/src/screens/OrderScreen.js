@@ -30,9 +30,7 @@ const OrderScreen = () => {
   //   }
 
   useEffect(() => {
-    if (!order || order.id !== orderId) {
-      dispatch(getOrderDetails(orderId));
-    }
+    dispatch(getOrderDetails(orderId));
   }, [dispatch, orderId]);
 
   return loading ? (
