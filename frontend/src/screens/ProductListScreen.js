@@ -68,8 +68,8 @@ const ProductListScreen = () => {
     dispatch(createProduct());
   };
 
-  // const tanggal = new Date();
-  // const konversi = tanggal.toLocaleString();
+  // const tanggal = Date.now();
+  // const konversi = new Date(tanggal);
 
   return (
     <>
