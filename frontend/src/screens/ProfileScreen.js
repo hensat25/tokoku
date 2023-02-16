@@ -65,7 +65,7 @@ const ProfileScreen = () => {
         {success && <Message variant="success">{success}</Message>}
         {loading && <Loader />}
         <Form onSubmit={submitHandler}>
-          <Form.Group className="py-3" controlId="email">
+          <Form.Group className="py-3" controlId="name">
             <Form.Label>Name</Form.Label>
             <Form.Control
               type="name"

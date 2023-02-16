@@ -63,7 +63,7 @@ const UserEditScreen = () => {
           <Message variant="danger">{error}</Message>
         ) : (
           <Form onSubmit={submitHandler}>
-            <Form.Group className="py-3" controlId="email">
+            <Form.Group className="py-3" controlId="name">
               <Form.Label>Name</Form.Label>
               <Form.Control
                 type="name"

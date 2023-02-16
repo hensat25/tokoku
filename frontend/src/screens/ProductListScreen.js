@@ -68,6 +68,9 @@ const ProductListScreen = () => {
     dispatch(createProduct());
   };
 
+  // const tanggal = new Date();
+  // const konversi = tanggal.toLocaleString();
+
   return (
     <>
       <Row className="align-items-center">
@@ -90,6 +93,8 @@ const ProductListScreen = () => {
         <Message variant="danger">{error}</Message>
       ) : (
         <Table striped bordered hover responsive className="table-sm">
+          {/* {console.log(`millis :${tanggal}`)}
+          {console.log(`konversi :${konversi}`)} */}
           <thead>
             <tr>
               <th>ID</th>
